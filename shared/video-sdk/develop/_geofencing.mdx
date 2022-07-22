@@ -1,0 +1,59 @@
+import * as data from '@site/data/variables';
+
+import ProjectImplement from '@docs/shared/video-sdk/develop/geofencing/project-implementation/index.mdx';
+import ProjectTest from '@docs/shared/video-sdk/develop/geofencing/project-test/index.mdx';
+import Reference from '@docs/shared/video-sdk/develop/geofencing/reference/index.mdx';
+
+# Geofencing
+
+When a user joins a channel, {data.VSDK} automatically connects them to the closest geographical region of {data.AGORA_BACKEND}. However, to meet the laws and regulations of your region, you may want to filter in or filter out connections to a specific geographical region. Agora geofencing enables you to control and customize data routing in your {props.CLIENT} by specifying the {data.AGORA_BACKEND} region users connect to.
+
+## Understand the tech
+
+This section shows you how to enable geofencing in your {props.CLIENT}. The following figure shows the workflow you implement for geofencing:
+
+![Netowrk geofencing](/images/others/geofencing.svg)
+
+## Prerequisites
+
+In order to follow this procedure you must have implemented [Get started with {props.PRODUCT}](../video-sdk/get-started/get-started).
+
+## Project setup
+
+In order to create the environment necessary to implement geofencing in your {props.CLIENT},  open the [Get started with {props.PRODUCT}](../get-started/get-started.adoc) project you created previously.
+
+[#implement]
+## Implement geofencing in your {props.CLIENT}
+
+This section shows how to use the {data.VSDK} to implement geofencing in your {props.CLIENT}.
+
+<ProjectImplement />
+
+## Test your implementation
+
+To ensure that you have implemented geofencing in your {props.CLIENT}:
+
+- {data.TOKEN-GENERATE-LINK} in {data.CONSOLE}.
+
+- In your browser, navigate to the {data.DEMO-PAGE-LINK} and update _App ID_, _Channel_, and _Token_ with the values for your temporary token, then click _JOIN_.
+
+<ProjectTest />
+
+## Reference
+
+This section contains information that completes the information in this page, or points you to documentation that explains other aspects to this product.
+
+- The supported regions are:
++
+* `AREA_CODE_GLOB`: (Default) Global
+* `AREA_CODE_CN`: Mainland China
+* `AREA_CODE_NA`: North America
+* `AREA_CODE_EU`: Europe
+* `AREA_CODE_AS`: Asia, excluding Mainland China
+* `AREA_CODE_JP`: Japan
+* `AREA_CODE_IN`: India
+
+- The area codes support bitwise operation.
+
+<Reference />
+

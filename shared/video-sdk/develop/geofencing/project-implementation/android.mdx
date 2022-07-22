@@ -1,0 +1,16 @@
+<PlatformWrapper platform="android">
+
+To enable geofencing in your {props.CLIENT}, set the `mAreaCode` property of `config` to a region for geofencing. In `/app/java/com.example.<projectname>/MainActivity`, locate the `setupVideoSDKEngine` method and add the following code before `config.mAppId = appId;`:
+[source,java]
+```java
+// Your app will only connect to Agora SD-RTN located in North America.
+config.mAreaCode = RtcEngineConfig.AreaCode.AREA_CODE_NA;
+```
+If your {props.CLIENT} fails to connect to the specified region of {data.AGORA_BACKEND}, instead of connection to another {data.AGORA_BACKEND} region, {data.VSDK} throws an error. If a firewall is deployed in your network environment, ensure that you:
+
+- Whitelist certain domains
+- Allow all IP addresses
+- Open the firewall ports defined in [renewToken]({data.API_REF_WEB}/interfaces/iagorartcclient.html#renewtoken)
+{data.AGORA-DOCS-URL}/{data.PRODUCT-FOLDER}/cloudproxy_native[Use Cloud Proxy].
+
+</PlatformWrapper>
