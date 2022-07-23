@@ -6,36 +6,36 @@ import Reference from '@docs/shared/video-sdk/develop/geofencing/reference/index
 
 # Geofencing
 
-When a user joins a channel, {data.VSDK} automatically connects them to the closest geographical region of {data.AGORA_BACKEND}. However, to meet the laws and regulations of your region, you may want to filter in or filter out connections to a specific geographical region. Agora geofencing enables you to control and customize data routing in your {props.CLIENT} by specifying the {data.AGORA_BACKEND} region users connect to.
+When a user joins a channel, <Vg k="VSDK" /> automatically connects them to the closest geographical region of <Vg k="AGORA_BACKEND" />. However, to meet the laws and regulations of your region, you may want to filter in or filter out connections to a specific geographical region. Agora geofencing enables you to control and customize data routing in your <Vpl k="CLIENT" /> by specifying the <Vg k="AGORA_BACKEND" /> region users connect to.
 
 ## Understand the tech
 
-This section shows you how to enable geofencing in your {props.CLIENT}. The following figure shows the workflow you implement for geofencing:
+This section shows you how to enable geofencing in your <Vpl k="CLIENT" />. The following figure shows the workflow you implement for geofencing:
 
-![Netowrk geofencing](/images/others/geofencing.svg)
+image::geofencing.svg[]
 
 ## Prerequisites
 
-In order to follow this procedure you must have implemented [Get started with {props.PRODUCT}](../video-sdk/get-started/get-started).
+In order to follow this procedure you must have implemented xref:{rootdir}/get-started/get-started.adoc[Get started with <Vpd k="PRODUCT"/>].
 
 ## Project setup
 
-In order to create the environment necessary to implement geofencing in your {props.CLIENT},  open the [Get started with {props.PRODUCT}](../get-started/get-started.adoc) project you created previously.
+In order to create the environment necessary to implement geofencing in your <Vpl k="CLIENT" />,  open the xref:{rootdir}/get-started/get-started.adoc[Get started with <Vpd k="PRODUCT"/>] project you created previously.
 
 [#implement]
-## Implement geofencing in your {props.CLIENT}
+== Implement geofencing in your <Vpl k="CLIENT" />
 
-This section shows how to use the {data.VSDK} to implement geofencing in your {props.CLIENT}.
+This section shows how to use the <Vg k="VSDK" /> to implement geofencing in your <Vpl k="CLIENT" />.
 
 <ProjectImplement />
 
 ## Test your implementation
 
-To ensure that you have implemented geofencing in your {props.CLIENT}:
+To ensure that you have implemented geofencing in your <Vpl k="CLIENT" />:
 
-- {data.TOKEN-GENERATE-LINK} in {data.CONSOLE}.
+. [Generate a temporary token](https://docs.agora.io/en/Agora%20Platform/get_appid_token?platform=All#generate-a-temporary-token)  in <Vpl k="CONSOLE" />.
 
-- In your browser, navigate to the {data.DEMO-PAGE-LINK} and update _App ID_, _Channel_, and _Token_ with the values for your temporary token, then click _JOIN_.
+. In your browser, navigate to the <Vg k="DEMO_PAGE_LINK" /> and update _App ID_, _Channel_, and _Token_ with the values for your temporary token, then click _JOIN_.
 
 <ProjectTest />
 
@@ -43,8 +43,8 @@ To ensure that you have implemented geofencing in your {props.CLIENT}:
 
 This section contains information that completes the information in this page, or points you to documentation that explains other aspects to this product.
 
-- The supported regions are:
-+
+. The supported regions are:
+
 * `AREA_CODE_GLOB`: (Default) Global
 * `AREA_CODE_CN`: Mainland China
 * `AREA_CODE_NA`: North America
@@ -53,7 +53,8 @@ This section contains information that completes the information in this page, o
 * `AREA_CODE_JP`: Japan
 * `AREA_CODE_IN`: India
 
-- The area codes support bitwise operation.
+. The area codes support bitwise operation.
 
-<Reference />
+:fragment: reference
+include::{rootdir}/shared/.tab-selecter-shared.adoc[]
 
